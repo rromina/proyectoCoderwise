@@ -1,6 +1,6 @@
 <?php
 
-define('URL', 'http://' . $_SERVER['HTTP_HOST'] . '//');
+define('URL', 'http://localhost/MVC-Proyecto/MvcVideo/');
 
 //conexion a la base de datos
 define('HOST', 'localhost');

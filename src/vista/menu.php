@@ -12,7 +12,7 @@
               </a>
             </li>
             <li>
-              <a href="empresa.html">
+              <a href="<?php echo URL;?>?c=Empresa&m=empresa"> 
                 <div class="nav-icons">
                   <i class="fa-solid fa-bus-simple"></i>
                   Empresa
@@ -20,7 +20,7 @@
               </a>
             </li>
             <li>
-              <a href="contacto.html">
+              <a href="<?php echo URL;?>src/vista/contacto/contacto.php">
                 <div class="nav-icons">
                   <i class="fa-solid fa-phone"></i>
                   Contacto
@@ -28,7 +28,7 @@
               </a>
             </li>
             <li>
-              <a href="noticias.html">
+              <a href="<?php echo URL;?>src/vista/noticias/noticias.php">
                 <div class="nav-icons">
                   <i class="fa-solid fa-newspaper"></i>
                   Noticias
