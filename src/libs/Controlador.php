@@ -9,9 +9,8 @@ class Controlador
   {
   }
 
-  function cargarVista($vistaRuta, $datos = null)
+  function cargarVista($vistaRuta)
   {
-    $this->datos = $datos;
     $ruta = "src/vista/{$vistaRuta}.php";
     require_once $ruta;
   }
