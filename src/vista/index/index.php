@@ -188,19 +188,8 @@
         <?php require 'src/vista/footer.php'; ?>
     </body>
 
-    <script>
-        window.addEventListener('scroll', function() {
-        let navbar = document.getElementById('fixed-color');
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-        if (scrollTop > 0) {
-        navbar.classList.add('fixed');
-        } else {
-        navbar.classList.remove('fixed');
-        }
-        });
-    </script>
-
     <!-- JS inicio website -->
     <script src="public/js/script.js"></script>
+    <script src="public/js/scroll-control.js"></script>
+
 </html>
