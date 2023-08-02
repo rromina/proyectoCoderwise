@@ -1,10 +1,10 @@
 {
     "license": "proprietary",
-    "name": "Viauy/app",
+    "name": "leandro/app",
     "description": "descripcion",
     "autoload": {
         "psr-4": {
-            "Viauy\\app\\": "src/"
+            "Leandro\\app\\": "src/"
         }
     },
     "require": {}
