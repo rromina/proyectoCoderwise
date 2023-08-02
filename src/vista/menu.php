@@ -4,7 +4,7 @@
     <nav>
         <ul>
             <li>
-              <a href="index.html">
+              <a href="<?php echo URL;?>?c=Index&m=index"> 
                 <div class="nav-icons">
                   <i class="fa-solid fa-house"></i>
                   Inicio
@@ -20,7 +20,7 @@
               </a>
             </li>
             <li>
-              <a href="<?php echo URL;?>src/vista/contacto/contacto.php">
+              <a href="<?php echo URL;?>?c=Contacto&m=contacto">
                 <div class="nav-icons">
                   <i class="fa-solid fa-phone"></i>
                   Contacto
@@ -28,7 +28,7 @@
               </a>
             </li>
             <li>
-              <a href="<?php echo URL;?>src/vista/noticias/noticias.php">
+              <a href="<?php echo URL;?>?c=Noticias&m=noticias">
                 <div class="nav-icons">
                   <i class="fa-solid fa-newspaper"></i>
                   Noticias
