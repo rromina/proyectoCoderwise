@@ -19,14 +19,23 @@
         <?php require 'src/vista/menu.php'; ?>
 
     
-        <!-- noticia website --> 
+        <div class="main contacto-background">
+            <div class="contacto">
+                <h2>Noticias</h2>
+                <div class="empresa-text">
+
+                   
+
+                </div>
+            </div>
+        </div>
     
         
         <?php require 'src/vista/footer.php'; ?>
     </body>
 
     <!-- JS noticia website -->
-    <script src="public/js/script.js"></script>
+    <script src="public/js/index.js"></script>
     <script src="public/js/scroll-control.js"></script>
 
 </html>

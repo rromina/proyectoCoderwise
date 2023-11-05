@@ -1,6 +1,6 @@
 <?php
 
-namespace Leandro\app\libs;
+namespace Coderwise\Viauy\libs;
 
 use PDO;
 use PDOException;
@@ -38,9 +38,6 @@ class Conexion
     return self::$conexion;
   }
 
-  /**
-   * Get the value of pdo
-   */
   public function getPdo()
   {
     return $this->pdo;

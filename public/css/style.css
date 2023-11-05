@@ -140,12 +140,12 @@ nav{
 
 @keyframes right {
     from{
-        top: 35%;
+        top: 30%;
         right: 40px;
     }
 
     to{
-        top: 35%;
+        top: 30%;
         right: 280px;
     }
 }
@@ -232,7 +232,7 @@ nav.open{
     padding: 40px 80px;
 }
 
-.travel-select h2{
+.travel-select h2, .asientos-content h2{
     font-weight: 500;
     font-size: 40px;
     margin-bottom: 30px;
@@ -257,16 +257,8 @@ nav.open{
     margin-right: 0;
 }
 
-.travel-buttons button:focus{
-    background-color: var(--main-color);
-    border: 1px solid var(--main-color);
-}
 
-.travel-buttons button:hover,
-.travel-buttons button:focus:hover{
-    background-color: var(--darkmain-color);
-    border: 1px solid var(--darkmain-color);
-}
+
 
 
 
@@ -279,7 +271,7 @@ nav.open{
 }
 
 
-#label-margin{
+#input-back{
     margin-top: 10px;
 }
 
@@ -503,14 +495,14 @@ nav.open{
     color: var(--white-color);
     margin-bottom: 0;
     text-shadow: 1px 3px 1px black;
-    animation: empresa 5s forwards infinite;
+    animation: empresa 4s forwards infinite;
 }
 
 
 
 @keyframes empresa{
     0%{
-        transform: translateY(-300%);
+        transform: translateY(-400%);
     }
 
     30%{
@@ -522,7 +514,7 @@ nav.open{
     }
 
     100%{
-        transform: translateY(300%);
+        transform: translateY(400%);
     }
     
 }
@@ -530,7 +522,7 @@ nav.open{
 
 
 
-/**************************** COMPRAR ***************************/
+/**************************** SERVICIOS ***************************/
 
 .overflow{
     overflow: hidden;
@@ -577,10 +569,195 @@ nav.open{
 
 
 
- 
+.lineas{
+    margin-top: 50px;
+    width: 70%;
+}
+
+.th h3{
+    margin: 0 3vw 1vw 0;
+}
+
+
+tbody tr{
+    border: 1px solid var(--white-color);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+tr td{
+    padding: 1vw;
+}
+
+
+
+
+
+/*************************** ELIGE ASIENTO ************************/
+
+
+.asientos-content{
+    min-width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px 80px;
+    margin-top: 50px;
+}
+
+.asientos-content h2{
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.referencias-asientos{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 100px;
+}
+
+.referencias{
+    min-width: 35%;
+    height: 100%;
+    box-shadow: var(--lightblack-color) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.referencias-titulo{
+    height: 40px;
+    background-color: var(--main-color);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 4px 2px 10px black;
+}
+
+
+.referencias-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.tipos-referencias{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tipos-referencias p{
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.referencias-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.asiento{
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estado de los asientos */
+
+.ocupado{
+    background-color: var(--darkmain-color);
+}
+
+.libre{
+    border: 1px solid var(--main-color);
+}
+
+.seleccionado{
+    background-color: var(--main-color);
+}
+
+.no-disponible{
+    background-color: var(--grey-color);
+}
+
+/************************/
+
+
+ .bus-asientos{
+    padding: 10px 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    box-shadow: var(--lightblack-color) 0px 5px 15px;
+    border-radius: 10px;
+ }
+
+ .asiento-posicion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0.2rem;
+ }
+
+
+ .bus-asientos .asiento-posicion .asiento{
+    border: 1px solid var(--main-color);
+    margin: 5px;
+    cursor: pointer;
+ }
+
+ .bus-asientos .asiento-posicion .asiento:hover{
+    background-color: var(--darkmain-color);
+    border: 1px solid var(--darkmain-color);
+ }
     
 
+ /***Botones Atras Continuar Asientos****/
 
+ .asiento-buttons{
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+ }
+
+ .asiento-buttons button{
+    padding: 10px;
+    width: 200px;
+    color: var(--white-color);
+    border-radius: 20px;
+    text-shadow: 4px 2px 4px black;
+    cursor: pointer;
+    
+ }
+
+ .asiento-buttons button:hover{
+    background-color: var(--darkmain-color);
+    border: 1px solid var(--darkmain-color);
+ }
+
+ .asiento-atras{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: white;
+ }
+
+ .asiento-continuar{
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+ }
 
 
     
@@ -671,6 +848,7 @@ nav.open{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 1rem;
 }
 
 .continue button{
@@ -829,7 +1007,7 @@ input[type=number]::-webkit-outer-spin-button {
 .name-secondname{
     display: flex;
     gap: 1rem;
-    width: 70%;
+    width: 80%;
 }
 
 .name-secondname .form-section input{
@@ -837,18 +1015,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form-section{
-    display: grid;
     width: 100%;
     
 }
 
 .form-section .asunto{
-    width: 70%;
+    display: block;
+    width: 80%;
 }
 
 .form-textarea{
     width: 100%;
-    display: grid;
 }
 
 .form-section input{
@@ -867,6 +1044,7 @@ textarea{
     padding: 10px;
     outline-color: var(--main-color);
     background-color: var(--white-color);
+    display: block;
 }
 
 .contacto-section-box{
@@ -893,17 +1071,34 @@ h3{
 
 
 
+
+/*********************************** NOTICIAS *********************************/
+
+
+.provicional{
+    height: 60vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************* EMPRESA ******************************************/
 
-.empresa-text{
+.contacto .empresa-text{
     line-height: 25px;
-    width: 80%;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 50px 0;
 }
 
 .empresa-text h3{
-    font-size: 24px;
-    font-weight: 500;
     margin: 50px 0 20px 0;
 }
 
@@ -1008,7 +1203,39 @@ footer{
     .travel{
         width: 60%;;
     }
+
+
+    .referencias{
+        min-width: 200px;
+    }
 }
+
+
+@media (max-width:1150px){
+     
+    .form-email{
+        flex-direction: column;
+    }
+    
+    .name-secondname{
+        display: flex;
+        gap: 1rem;
+        width: 80%;
+    }
+    
+    
+    .form-section .asunto{
+        display: block;
+        width: 80%;
+    }
+
+    .form-textarea textarea{
+        width: 100%;
+    }
+    
+    
+}
+
 
 
 @media (max-width: 1100px){
@@ -1136,6 +1363,11 @@ footer{
         font-size: 14px;
     }
 
+
+    .bus-asientos{
+        gap: 2rem;
+    }
+
 }
 
 
@@ -1150,6 +1382,24 @@ footer{
     #register{
         min-width: 70vw;
         padding: 50px 40px;
+    }
+
+    .name-secondname{
+        width: 100%;
+    }
+
+    .form-section .asunto{
+        width: 100%;
+    }
+
+
+
+    .asiento{
+        width: 4vw;
+        height: 4vw;
+    }
+    .tipos-referencias p{
+        height: 4vw;
     }
     
 }
@@ -1179,7 +1429,7 @@ footer{
         padding: 40px 40px;
     }
 
-    .travel-select h2{
+    .travel-select h2, .asientos-content h2{
         font-size: 30px;
     }
 
@@ -1223,6 +1473,10 @@ footer{
         font-size: 27px;
     }
 
+    .icons-box i, .icons-box a, .icons-box #menu, .icons-box .icons-nolinks{
+        font-size: 27px;
+    }
+
     .login{
         background-color: transparent;
     }
@@ -1256,8 +1510,76 @@ footer{
         flex-direction: column;
     }
 
+
+    .contacto{
+        text-align: center;
+    }
+
+    .contacto h2{
+        font-size: 30px;
+    }
+    
+
+    .form-email form{
+        gap: 2rem;
+        align-items: center;
+    }
+    
+
+    .name-secondname{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-email{
+        gap: 10rem;
+        
+    }
+
+
+    .empresa-text{
+        margin: 0;
+    }
+
+
+
+    
+    .asiento {
+        font-size: 12px;
+    }
+
+    .asientos-content{
+        padding: 40px 40px;
+        width: 100%;
+        
+    }
+
+    .referencias-asientos, .asientos-content h2, .asiento-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .asientos-content h3{
+        font-size: 20px;
+    }
+
+    .referencias{
+        min-width: 200px;
+    }
+
     
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width:565px) {
     
@@ -1272,7 +1594,7 @@ footer{
         justify-content: center;
     }
 
-    .travel-select{
+    .travel-select, .asientos-content{
         margin-top: 0;
         display: flex;
         flex-direction: column;
@@ -1280,7 +1602,7 @@ footer{
         background-color: transparent;
     }
 
-    .travel-select h2{
+    .travel-select h2, .asientos-content h2{
         font-size: 30px;
     }
 
@@ -1321,6 +1643,7 @@ footer{
         font-size: 18px;
     }
 
+
     nav.open{
         width: 260px;
     }
@@ -1336,6 +1659,32 @@ footer{
             top: 25%;
             right: 280px;
         }
+    }
+
+
+
+    .asientos-content{
+        background-color: transparent;
+    }
+
+
+    .referencias{
+        min-width: 300px;
+    }
+
+    .referencias-asientos{
+        display: grid;
+        gap: 2rem;
+    }
+
+
+    .asiento{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .tipos-referencias{
+        justify-content: space-between;
     }
 
 
@@ -1390,6 +1739,19 @@ footer{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:500px){
 
     
@@ -1407,7 +1769,7 @@ footer{
         font-size: 14px;
     }
 
-    .travel-select h2{
+    .travel-select h2, .asientos-content h2{
         font-size: 30px;
     }
 
@@ -1448,6 +1810,10 @@ footer{
         justify-content: end;
     }
 
+    .icons-box i, .icons-box a, .icons-box #menu, .icons-box .icons-nolinks{
+        font-size: 22px;
+    }
+
     .nav-icons{
         font-size: 14px;
     }
@@ -1455,6 +1821,7 @@ footer{
     nav.open{
         width: 200px;
     }
+    
 
 
     .icon-movil{
@@ -1474,7 +1841,7 @@ footer{
         }
     }
 
-    .travel-select h2{
+    .travel-select h2, .asientos-content h2{
         font-size: 25px;
     }
 
@@ -1485,6 +1852,11 @@ footer{
 
     .footer-content1 p, .footer-content2 ul li a, .coderwise-content p, .coderwise-content a{
         font-size: 10px;
+    }
+
+    .asiento{
+        width: 6vw;
+        height: 6vw;
     }
  
 }
@@ -1534,12 +1906,17 @@ footer{
     }
 
 
+    .asientos-content h3{
+        font-size: 18px;
+    }
+
+
 }
 
 
 @media (max-width:380px){
 
-    .travel-select h2{
+    .travel-select h2, .asientos-content h2{
         text-align: center;
         font-size: 23px;
     }
@@ -1562,6 +1939,16 @@ footer{
 
     .icons-box .icons-nolinks{
         margin-left: 0;
+    }
+
+
+    .asiento{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .asiento-buttons{
+        gap: 2rem;
     }
 
 
@@ -1597,5 +1984,12 @@ footer{
     .footer-content1 p, .footer-content2 ul li a{
         font-size: 10px;
     }
-}
 
+
+    .referencias{
+        min-width: 200px;
+    }
+
+
+    
+}

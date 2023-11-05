@@ -17,6 +17,27 @@
     <body>
     <?php require 'src/vista/menu.php'; ?>
 
+
+    <?php 
+        if(!empty($msj))
+        {
+            echo "<script>Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'reserva generada con exito.',
+                showConfirmButton: false,
+                timer: 1500
+              })</script>";
+        }else 
+        {
+            echo "<script>Swal.fire({
+                title: 'Error!',
+                text: 'Hubo algun error en su reserva de pasaje.',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })</script>";
+        }
+    ?>
     <!-- inicio website --> 
     <div class="main inicio">
             <div class="travel">
@@ -24,16 +45,16 @@
                 <div class="travel-select">
                     <h2>Compra tu pasaje</h2>
                     <div class="travel-buttons">
-                        <button class="buttons" autofocus id="go">solo ida</button>
+                        <button class="buttons" id="go" style="background-color: #E79115;">solo ida</button>
                         <button class="buttons" id="back">ida / vuelta</button>
                     </div>
-                    <form class="pasaje" action="">
+                    <form class="pasaje" action="<?php echo URL . "?c=Servicios&m=consulta_travel"; ?>" method="POST">
                         <div class="input-travel-box">
                             <div class="input-travel">
                                 <label for="">Origen</label>
                                 <div class="icon-input-travel">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <input type="text" placeholder="Indique punto de origen">
+                                    <input type="text" placeholder="Indique punto de origen" name="origen" required>
                                 </div>
                                 
                             </div>
@@ -41,7 +62,7 @@
                                 <label for="">Destino</label>
                                 <div class="icon-input-travel">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <input type="text" placeholder="Indique punto de destino">
+                                    <input type="text" placeholder="Indique punto de destino" name="destino" required>
                                 </div>
                                 
                             </div>
@@ -49,7 +70,7 @@
                                 <label for="">Fecha de Ida</label>
                                 <div class="icon-input-travel">
                                     <i class="fa-solid fa-calendar-days"></i>
-                                    <input type="date" class="icon-none">
+                                    <input type="date" class="icon-none" required>
                                 </div>
                                 
                             </div>
@@ -57,7 +78,7 @@
                                 <label for="">Fecha de Regreso</label>
                                 <div class="icon-input-travel">
                                     <i id="icon-position" class="fa-solid fa-calendar-days"></i>
-                                    <input id="label-margin" type="date" class="icon-none" placeholder="fecha">
+                                    <input id="input-back" type="date" class="icon-none" placeholder="fecha">
                                 </div>
                                 
                             </div>
@@ -189,7 +210,9 @@
     </body>
 
     <!-- JS inicio website -->
-    <script src="public/js/script.js"></script>
-    <script src="public/js/scroll-control.js"></script>
+    <script src="public/js/index.js"></script>
+    <script src="public/js/reserva.js"></script>
+    <script src="public/js/scroll-control.js"></script>'
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>'
 
 </html>

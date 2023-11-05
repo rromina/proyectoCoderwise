@@ -1,7 +1,6 @@
 <?php
 
-namespace Leandro\app\libs;
-
+namespace Coderwise\Viauy\libs;
 
 use PDO;
 use PDOException;

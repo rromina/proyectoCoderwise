@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViaUY</title>
+
+  <!-- CSS contacto website -->
+  <link rel="stylesheet" href="../../../public/css/style.css">
+
+  <!-- fontAwesome dependences -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="overflow">
+    <div class="loading-center" id="onload">
+        <img class="img-loading" src="public/img/bus-loading.png" alt="">
+        <div class="loader"></div>
+    </div>
+    <header class="color-nav">
+        <a href="index.html" class="link-icon-main"><img class="icon-main" id="icon-main" src="public/img/logos-png/icon-main.png" alt=""></a>
+        <a href="index.html" class="link-icon-movil"><img class="icon-movil" id="icon-main-movil" src="public/img/logos-png/icon-login.png" alt=""></a> 
+        <nav>
+            <ul>
+                <li>
+                  <a href="index.html">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-house"></i>
+                      Inicio
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="tarifas.html">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-money-bill-1"></i>
+                      Tarifas
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="empresa.html">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-bus-simple"></i>
+                      Empresa
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="contacto.html">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-phone"></i>
+                      Contacto
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="noticias.html">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-newspaper"></i>
+                      Noticias
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="horarios.html">
+                    <div class="nav-icons">
+                      <i class="fa-regular fa-clock"></i>
+                      Horarios
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <span style="width: 100%; height: 100%;">
+                    <div class="nav-icons">
+                      <i class="fa-solid fa-earth-americas"></i>
+                      <select class="language">
+                        <option class="option" value="es">Español</option>
+                        <option class="option" value="en">English</option>
+                      </select>
+                    </div>
+                  </span>
+                </li>
+              </ul>
+
+        </nav>
+        <div class="icons-box">
+          <div class="idiomas">
+              <select class="language">
+                  <option class="option" value="es">ESP</option>
+                  <option class="option" value="en">ENG</option>
+              </select>
+              <i class="fa-solid fa-earth-americas icons-nolinks"></i>
+          </div>
+          
+          <a href="login.html"><i class="fa-solid fa-user"></i></a>
+          <i class="fa-solid fa-bars" id="menu"></i>
+        </div>
+    </header>
+
+    <div class="main inicio">
+        <div class="contacto">
+            <h2>Servicios</h2>
+            
+                
+            <table class="lineas">
+                <thead>
+                    <tr>
+                        <th scope="col" class="th"><h3>Salida</h3></th>
+                        <th scope="col" class="th"><h3>Llegada</h3></th>
+                        <th scope="col" class="th"><h3>Duración</h3></th>
+                        <th scope="col" class="th"><h3>Precio</h3></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>18:00 hs</td> <!-- Dato hora de salida a insertar -->
+                        <td>23:00 hs</td> <!-- Dato hora de llegada a insertar -->
+                        <td>5 hs</td> <!-- Dato duracion del viaje a insertar -->
+                        <td>200 $</td> <!-- Dato precio a insertar -->
+                        <td> <button class="search">Comprar</button></td>
+                    </tr>
+                    <tr>
+                        <td>18:00 hs</td>
+                        <td>23:00 hs</td>
+                        <td>5 hs</td>
+                        <td>200 $</td>
+                        <td> <button class="search">Comprar</button></td>
+                    </tr>
+                    <tr>
+                        <td>18:00 hs</td>
+                        <td>23:00 hs</td>
+                        <td>5 hs</td>
+                        <td>200 $</td>
+                        <td> <button class="search">Comprar</button></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+                
+
+        
+        </div>
+    </div>
+    <footer>
+        <div class="viauy-footer">
+            <div class="footer-content1">
+                <img class="img-footer" src="public/img/logos-png/Viauy-5.png" alt="">
+                <p>
+                  ViaUY une a todo el Uruguay brindando el mejor servicio 
+                  de transporte, mediante una red de más de 250 
+                  servicios diarios.
+                </p>
+            </div>
+
+
+            <ul class="ul">
+                <li><a href="">Sobre nosotros</a></li>
+                <li><a href="">Noticias</a></li>
+                <li><a href="">Agencias</a></li>
+                <li><a href="">Reclamos</a></li>
+            </ul>
+                
+            
+            
+            <ul class="ul">
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Correo</a></li>
+                <li><a href="">Telefono</a></li>
+            </ul>
+            
+            
+            <ul class="ul">
+                <li><a href="">Instagram</a></li>
+                <li><a href="">X</a></li>
+                <li><a href="">Facebook</a></li>
+            </ul>
+            <div class="footer-content2">
+                
+                <ul>
+                    <li><a href="">Sobre nosotros</a></li>
+                    <li><a href="">Noticias</a></li>
+                    <li><a href="">Agencias</a></li>
+                    <li><a href="">Reclamos</a></li>
+                </ul>
+                    
+                
+                
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Correo</a></li>
+                    <li><a href="">Telefono</a></li>
+                </ul>
+                
+                
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">X</a></li>
+                    <li><a href="">Facebook</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="coderwise">
+            <div class="coderwise-content">
+                <p>©2023 - ViaUY | All rights are reserved</p>
+                <p>Created by <a href="">CoderWise</a></p>  
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        window.onload = function() {
+          setTimeout(() => {
+            let onloadElement = document.getElementById('onload');
+            onloadElement.style.display = 'none';
+            
+            let bodyElement = document.body;
+            bodyElement.classList.remove('overflow');
+        }, 1500);
+        
+        
+        };
+     
+    </script>
+</body>
+
+<!-- JS contacto website -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="public/js/reserva.js"></script>
+
+<!--<script src="public/js/index.js"></script>-->
+<script src="public/js/scroll-control.js"></script>
+
+</html>

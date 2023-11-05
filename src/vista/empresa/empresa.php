@@ -19,14 +19,51 @@
         <?php require 'src/vista/menu.php'; ?>
 
     
-        <!-- empresa website --> 
+        <div class="main contacto-background">
+            <div class="contacto">
+                <h2>Empresa</h2>
+                <div class="empresa-text">
+
+                    <h3>¿Quiénes Somos?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                    </p>
+
+                    <h3>Misión</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                    </p>
+
+                    <h3>Visión</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                    </p>
+
+                    <h3>Valores</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia aspernatur, quae 
+                        numquam corporis ipsam nesciunt eveniet vel atque ullam aperiam, quasi aliquid aliquam debitis 
+                        recusandae magni illo eaque cum.
+                    </p>
+
+                </div>
+            </div>
+        </div>
     
         
         <?php require 'src/vista/footer.php'; ?>
     </body>
 
     <!-- JS empresa website -->
-    <script src="public/js/script.js"></script>
+    <script src="public/js/index.js"></script>
     <script src="public/js/scroll-control.js"></script>
 
 </html>

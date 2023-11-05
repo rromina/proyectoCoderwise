@@ -40,7 +40,7 @@ header{
 nav{
     position: fixed;
     height: 100vh;
-    width: 20vw;
+    min-width: 20vw;
     background-color: var(--black-color);
     top: 0;
     right: 0;
@@ -76,9 +76,9 @@ nav a.active{
     background-color: var(--lightblack-color);
 }
 
-main{
-    width: 100%;
-    padding: 20px 30px 40px 20px;
+main {
+    width: calc(100% - 20vw);
+    padding: 1rem 2rem;
 }
 
 
@@ -93,7 +93,7 @@ h1{
     border-radius: 20px;
     height: 100%;
     width: 100%;
-    padding: 10px 0 30px 80px;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 20px;
@@ -135,7 +135,7 @@ h1{
 }
 
 .info-box{
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between
@@ -222,7 +222,7 @@ hr{
 }
 
 
-.news-input input[type="text"]{
+.news-input input[type="text"], .news-input input[type="number"]{
     width: 50%;
     border: none;
     border: 1px solid black;
@@ -233,6 +233,7 @@ hr{
 .news-input textarea{
     border: none;
     border: 1px solid black;
+    padding: 10px;
 }
 
 
@@ -242,7 +243,7 @@ hr{
 .editar-linea{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 400px;
     gap: 1rem;
     margin-top: 20px;
 }
@@ -266,7 +267,7 @@ hr{
     width: 100%;
 }
 
-.button-box-editar input{
+.button-box-editar button{
     border: none;
     width: 250px;
     padding: 10px;
@@ -276,9 +277,112 @@ hr{
     font-size: 20px;
 }
 
-.button-box-editar input:hover{
+.button-box-editar button:hover{
     background-color: #b46f0f;
 }
 
 
 
+
+
+/******************************** PERFIL *********************************************/
+
+
+.perfil-photo{
+    display: flex;
+    gap: 10%;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-text{
+    max-width: 500px;
+}
+
+.photo-text p{
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.perfil-info{
+    margin-top: 50px;
+}
+
+
+.perfil-info p{
+    margin-top: 20px;
+
+}
+
+.texto-error {
+    font-size: 0.8rem;
+    color: #f00;
+}
+
+
+@media (max-width:1330px){
+    .photo{
+        min-width: 150px;
+    }
+}
+
+input[type="text"], input[type="number"],  select {
+    border-radius: 3px;
+    width: 100%;
+}
+.select {
+    border: 1px solid #000;
+    padding: 0.23rem;
+}
+
+.datatable {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+}
+
+.datatable thead {
+    flex: 1 100%;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.datatable thead tr, .datatable tbody tr{
+    display: flex;
+    gap: 1rem;
+}
+
+.datatable tbody tr {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.datatable thead th, .datatable tbody td{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
+}
+
+.datatable tbody td.action-column{
+    display: flex;
+    gap: 1rem;
+}
+
+.datatable tbody td.action-column span{
+    cursor: pointer;
+}
