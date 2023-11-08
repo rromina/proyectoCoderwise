@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s ease;
+}
+
+:root {
+    --main-color: #E79115;
+    --darkmain-color: #6c3d00;
+    --black-color: #141414;
+    --lightblack-color: #222222;
+    --white-color: #F2F2F2;
+    --grey-color: #919293;
+
+    --button-color:#b46f0f;
+       
+}
+
+
+body{
+    position: relative;
+    height: 100vh;
+    background-color: var(--white-color);
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    position: fixed;
+    height: 100vh;
+    min-width: 20vw;
+    background-color: var(--black-color);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 50px 0;
+    z-index: 11111;
+}   
+
+nav a{
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    font-size:20px;
+    width: 100%;
+    height: 50%;
+    padding: 0 20px;
+}
+
+nav i{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+nav a:hover{
+    background-color: var(--lightblack-color);
+}
+
+nav a.active{
+    background-color: var(--lightblack-color);
+}
+
+main {
+    width: calc(100% - 20vw);
+    padding: 1rem 2rem;
+}
+
+
+
+h1{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+.panel{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 20px;
+
+}
+
+.panel-eliminar {
+    border-radius: 20px;
+    height: 85vh;
+    width: 100%;
+    padding: 10px 0 30px 80px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 20px;
+}
+
+
+
+
+/******************** ELIMINAR LINEAS ********************************/
+
+
+.bus-lineas{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 25px;
+    width: 50%;
+}
+
+.bus-lineas .lineas{
+    width: 100%;
+    border-bottom: 1px solid var(--lightblack-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 3rem;
+}
+
+.info-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.checkbox-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 50%;
+    justify-content: end;
+}
+
+.checkbox-box input{
+    width: 20px;
+    height: 20px;
+
+}
+
+
+.button-box{
+    width: 50%;
+    text-align: center;
+    
+}
+
+
+.button-box input, .button-box button{
+    border: none;
+    width: 250px;
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-box input:hover, .button-box button:hover{
+    background-color: #b46f0f;
+}
+
+
+.bus-lineas .button-box{
+    width: 100%;
+}
+
+
+
+hr{
+    width: 100%;
+    margin-left: -80px;
+    margin-top: 30px;
+}
+
+
+.news-create h1{
+    font-weight: 500;
+}
+
+
+.news-create form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.news-create form label{
+    margin-bottom: 5px;
+}
+
+.news-input{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.news-input input[type="file"]{
+    width: 50%;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.news-input input[type="text"], .news-input input[type="number"]{
+    width: 50%;
+    border: none;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.news-input textarea{
+    border: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+
+/*************************** EDITAR LINEAS *****************************/
+
+.editar-linea{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+
+.editar-linea .news-input{
+    width: 100%;
+}
+
+.editar-linea .news-input input{
+    width: 100%;
+}
+
+.editar-linea label{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.button-box-editar{
+    text-align: center;
+    width: 100%;
+}
+
+.button-box-editar button{
+    border: none;
+    width: 250px;
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-box-editar button:hover{
+    background-color: #b46f0f;
+}
+
+
+
+
+
+/******************************** PERFIL *********************************************/
+
+
+.perfil-photo{
+    display: flex;
+    gap: 10%;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-text{
+    max-width: 500px;
+}
+
+.photo-text p{
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.perfil-info{
+    margin-top: 50px;
+}
+
+
+.perfil-info p{
+    margin-top: 20px;
+
+}
+
+.texto-error {
+    font-size: 0.8rem;
+    color: #f00;
+}
+
+
+@media (max-width:1330px){
+    .photo{
+        min-width: 150px;
+    }
+}
+
+input[type="text"], input[type="number"],  select {
+    border-radius: 3px;
+    width: 100%;
+}
+.select {
+    border: 1px solid #000;
+    padding: 0.23rem;
+}
+
+.datatable {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+}
+
+.datatable thead {
+    flex: 1 100%;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.datatable thead tr, .datatable tbody tr{
+    display: flex;
+    gap: 1rem;
+}
+
+.datatable tbody tr {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.datatable thead th, .datatable tbody td{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
+}
+
+.datatable tbody td.action-column{
+    display: flex;
+    gap: 1rem;
+}
+
+.datatable tbody td.action-column span{
+    cursor: pointer;
+}

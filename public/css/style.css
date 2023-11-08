@@ -1,0 +1,1993 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s ease;
+}
+
+:root {
+    --main-color: #E79115;
+    --darkmain-color: #6c3d00;
+    --black-color: #141414;
+    --lightblack-color: #222222;
+    --white-color: #F2F2F2;
+    --grey-color: #919293;
+       
+}
+
+
+header{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.fixed{
+    background-color: black;
+}
+
+
+i{
+    color: var(--white-color);
+}
+
+
+.icons-box{
+    display: flex;
+    align-items: center;
+        
+}
+
+.icons-box .icons-nolinks, .icons-box #menu{
+    margin-left: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+
+.icons-box a{
+    margin-left: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+.icon-main{
+    width: 370px; 
+    height: 40px;
+}
+
+.link-icon-movil{
+    display: none;
+}
+
+
+header ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+}
+
+header ul a{
+    color: var(--white-color);
+    width: 100%;
+    height: 100%;
+}
+
+header ul li{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.idiomas{
+    display: flex;
+    align-items: center;
+}
+
+.icons-box .icons-nolinks{
+    margin-left: 5px;
+}
+
+
+
+.language{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.language .option{
+    color: var(--black-color);
+}
+
+
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 0;
+    z-index: -2;
+    overflow: hidden;
+    padding: 40px 0 80px 0;
+}
+
+
+@keyframes right {
+    from{
+        top: 30%;
+        right: 40px;
+    }
+
+    to{
+        top: 30%;
+        right: 280px;
+    }
+}
+
+
+
+.icons-box.open{
+    position: absolute;
+    animation: right .55s forwards;
+}
+    
+
+nav.open{
+    width: 250px;
+    z-index: 100;
+    transition: .55s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav-icons:hover{
+    background-color: var(--main-color);
+}
+
+.nav-icons i{
+    display: block;
+    color: var(--white-color);
+    margin-right: 10px;
+}
+
+
+
+/* INICIO */
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 15vh 0 20vh 0;
+}
+
+
+.inicio{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/bus.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 125%;
+}
+
+
+.travel{
+    width: 50vw;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel h1{
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--white-color);
+}
+
+.travel-select{
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 80px;
+}
+
+.travel-select h2, .asientos-content h2{
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.travel-buttons button{
+    padding: 5px;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    width: 125px;
+    text-shadow: 2px 2px 4px black;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--white-color);
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.travel-buttons button:nth-child(2){
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+#day-back{
+    display: none;
+}
+
+
+#input-back{
+    margin-top: 10px;
+}
+
+#icon-position{
+    top: 40%;
+}
+
+
+.input-travel-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pasaje i{
+    color: var(--black-color);
+}
+
+.input-travel{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 30px 10px 0;
+}
+
+.input-travel label{
+    margin-bottom: 10px;
+}
+
+.input-travel input{
+    padding: 9px 9px 9px 30px;
+    width: 100%;
+    border: none;
+    color: black;
+}
+
+.input-travel input::placeholder{
+    color: black;
+}
+
+#amount-seatings{
+    padding: 7px 9px 7px 30px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.icon-input-travel{
+    position: relative;
+    width: 100%;
+}
+
+.icon-input-travel i{
+    position: absolute;
+    top: 27%;
+    left: 3%;
+}
+
+.icon-none::-webkit-calendar-picker-indicator{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+.travel-search{
+    margin-top: 30px;
+}
+
+.search{
+    padding: 10px;
+    width: 200px;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white-color);
+    border-radius: 20px;
+    text-shadow: 4px 2px 4px black;
+}
+
+.search:hover{
+    background-color: var(--darkmain-color);
+    cursor: pointer;
+}
+
+
+
+
+/***************** INICIO 2 ******************************/
+
+
+
+
+.main2{
+    height: 100%;
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.content-main2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.main2 h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.content-main2 hr{
+    background-image: linear-gradient(90deg, transparent 0%, var(--black-color) 50%, transparent 100%);
+    width: 80%;
+    border: 0;
+    height: 1px;
+    margin-top: 10px;
+}
+
+.services-box{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    padding-top: 30px;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.services-icon{
+    font-size: 50px;
+}
+
+.services p{
+    line-height: 23px;
+    font-size: 15px;
+}
+
+
+
+.content-two-main2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+
+.content-two-main2 hr{
+    background-image: linear-gradient(90deg, transparent 0%, var(--black-color) 50%, transparent 100%);
+    width: 80%;
+    border: 0;
+    height: 1px;
+    margin-top: 10px;
+
+}
+
+.city-box{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 2rem;
+    margin-top: 50px;
+}
+
+.city{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 20px;
+}
+
+.img-city{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.city:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: default;
+}
+
+.city p{
+    line-height: 23px;
+    font-size: 15px;
+    margin: 0 0 5px 5px;
+}
+
+.city h3{
+    margin-left: 5px;
+}
+
+
+
+.content-three-main2{
+    height: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/atardecer.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.content-three-main2 h2{
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--white-color);
+    margin-bottom: 0;
+    text-shadow: 1px 3px 1px black;
+    animation: empresa 4s forwards infinite;
+}
+
+
+
+@keyframes empresa{
+    0%{
+        transform: translateY(-400%);
+    }
+
+    30%{
+        transform: translateY(0%);
+    }
+
+    90%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(400%);
+    }
+    
+}
+
+
+
+
+/**************************** SERVICIOS ***************************/
+
+.overflow{
+    overflow: hidden;
+}
+
+.loading-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/atardecer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+.img-loading{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.loader {
+    margin: auto;
+    border: 15px solid var(--white-color);
+    border-radius: 50%;
+    border-top: 15px solid var(--main-color);
+    width: 200px;
+    height: 200px;
+    animation: spinner 1.5s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /*
+
+.lineas{
+    margin-top: 50px;
+    width: 70%;
+}
+
+.th h3{
+    margin: 0 3vw 1vw 0;
+}
+
+
+tbody tr{
+    border: 1px solid var(--white-color);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+tr td{
+    padding: 1vw;
+}
+
+
+
+/*************************** ELIGE ASIENTO ************************/
+
+
+.asientos-content{
+    min-width: 50vw;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px 80px;
+    margin-top: 50px;
+}
+
+.asientos-content h2{
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.referencias-asientos{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 100px;
+}
+
+.referencias{
+    min-width: 35%;
+    height: 100%;
+    box-shadow: var(--lightblack-color) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.referencias-titulo{
+    height: 40px;
+    background-color: var(--main-color);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 4px 2px 10px black;
+}
+
+
+.referencias-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.tipos-referencias{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tipos-referencias p{
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.referencias-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.asiento{
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estado de los asientos */
+
+.ocupado{
+    background-color: var(--darkmain-color);
+}
+
+.libre{
+    border: 1px solid white;
+}
+
+.seleccionado{
+    background-color: var(--main-color);
+}
+
+.no-disponible{
+    background-color: var(--grey-color);
+}
+
+/************************/
+
+
+ .bus-asientos{
+    padding: 10px 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    box-shadow: var(--lightblack-color) 0px 5px 15px;
+    border-radius: 10px;
+ }
+
+ .asiento-posicion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0.2rem;
+ }
+
+
+ .bus-asientos .asiento-posicion .asiento{
+    border: 1px solid var(--main-color);
+    margin: 5px;
+    cursor: pointer;
+ }
+
+ .bus-asientos .asiento-posicion .asiento:hover{
+    background-color: var(--darkmain-color);
+    border: 1px solid var(--darkmain-color);
+ }
+    
+
+ /***Botones Atras Continuar Asientos****/
+
+ .asiento-buttons{
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+ }
+
+ .asiento-buttons button{
+    padding: 10px;
+    width: 200px;
+    color: var(--white-color);
+    border-radius: 20px;
+    text-shadow: 4px 2px 4px black;
+    cursor: pointer;
+    
+ }
+
+ .asiento-buttons button:hover{
+    background-color: var(--darkmain-color);
+    border: 1px solid var(--darkmain-color);
+ }
+
+ .asiento-atras{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: white;
+ }
+
+ .asiento-continuar{
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+ }
+
+
+    
+
+/************************* LOGIN ********************************/
+
+
+
+.login{
+    min-width: 35vw;
+    height: 80vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px 0 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--white-color);
+}
+
+.icon-login-box{
+    padding-bottom: 50px;
+}
+
+.icon-login{
+    width: 170px;
+    height: 40px;
+}
+
+.title-login-movil{
+    display: none;
+}
+
+
+.content-login{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+}
+
+.input-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-box i{
+    position: absolute;
+    top: 19%;
+    left: 3%;
+    color: var(--black-color);
+}
+
+.space i{
+    margin-bottom: 40px;
+}
+
+.content-login h3{
+    margin-bottom: 40px;
+}
+
+.content-login input{
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.space{
+    margin: 10px;
+}
+
+
+.title-login h3{
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.continue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.continue button{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    background-color: var(--main-color);
+    margin-top: 30px;
+    width: 100%;
+    color: var(--white-color);
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.continue button:hover{
+    background-color: var(--darkmain-color);
+    border: 1px solid var(--darkmain-color)
+}   
+
+
+.remember{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.remember div{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.login a{
+    color: var(--main-color);
+}
+
+.register-here{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+/************************ REGISTER **********************************/
+
+#register{
+    max-width: 40vw;
+    height: 100%;
+    padding: 50px 80px;
+}
+
+
+.name-register{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-register .input-box .icons-flex{
+    top: 17%;
+    left: 6%;
+}
+
+.register-titles{
+    margin-bottom: 10px;
+}
+
+.left-input{
+    margin-right: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#register .input-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#register .input-box i{
+    position: absolute;
+    top: 19%;
+    left: 3%;
+    color: var(--black-color);
+}
+
+#register .continue button{
+    margin: 0;
+}
+
+
+
+.warning-message{
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+
+
+
+
+
+
+/*********************************** CONTACTO ****************************/
+
+.contacto-background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/bus-dos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.contacto{
+    width: 70%;
+    height: 50%;
+    color: var(--white-color);
+}
+
+.contacto h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.contacto-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form-email form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-email{
+    display: flex;
+    gap: 5rem;
+    margin-top: 20px;
+}
+
+.name-secondname{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+}
+
+.name-secondname .form-section input{
+    width: 100%;
+}
+
+.form-section{
+    width: 100%;
+    
+}
+
+.form-section .asunto{
+    display: block;
+    width: 80%;
+}
+
+.form-textarea{
+    width: 100%;
+}
+
+.form-section input{
+    padding: 5px;
+    border: 0;
+    border-radius: 0;
+    border: 1px solid var(--lightblack-color);
+    width: 100%;
+    outline-color: var(--main-color);
+    background-color: var(--white-color);
+}
+
+textarea{
+    border: none;
+    border: 1px solid var(--lightblack-color);
+    padding: 10px;
+    outline-color: var(--main-color);
+    background-color: var(--white-color);
+    display: block;
+}
+
+.contacto-section-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacto-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h3{
+    font-size: 24px; 
+    font-weight: 500;
+ }
+
+.contacto-section p{
+    font-weight: 300;
+}
+
+
+
+
+
+/*********************************** NOTICIAS *********************************/
+
+
+.provicional{
+    height: 30vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************* EMPRESA ******************************************/
+
+.contacto .empresa-text{
+    line-height: 25px;
+    width: 100%;
+    margin-top: 50px 0;
+}
+
+.empresa-text h3{
+    margin: 50px 0 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/********************************** FOOTER ******************************************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: black;
+    color: var(--white-color);
+    padding-bottom: 20px;
+}
+
+.viauy-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    width: 80%;
+    padding: 0 ;
+}
+
+.img-footer{
+    width: 300px;
+    height: 30px;
+}
+
+.footer-content1{
+    width: 30%;
+}
+
+.footer-content1 p{
+    font-size: 12px;
+    line-height: 23px;
+    
+}
+
+.footer-content2{
+    display: none;
+}
+
+.viauy-footer ul{
+    list-style: none;
+}
+
+.viauy-footer ul li{
+    margin-bottom: 5px;
+}
+
+.viauy-footer ul li a{
+    color: var(--white-color);
+    font-size: 12px;
+}
+
+
+
+.coderwise{
+    width: 100%;
+    border-top: 1px solid white;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.coderwise-content{
+    text-align: center;
+    line-height: 25px;
+}
+
+.coderwise-content a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1385px){
+
+    #register{
+        min-width: 50vw;
+        
+    }
+
+
+    .travel{
+        width: 60%;;
+    }
+
+
+    .referencias{
+        min-width: 200px;
+    }
+}
+
+
+@media (max-width:1150px){
+     
+    .form-email{
+        flex-direction: column;
+    }
+    
+    .name-secondname{
+        display: flex;
+        gap: 1rem;
+        width: 80%;
+    }
+    
+    
+    .form-section .asunto{
+        display: block;
+        width: 80%;
+    }
+
+    .form-textarea textarea{
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+@media (max-width: 1100px){
+
+    #register{
+        min-width: 60vw;
+        
+    }
+}
+
+
+
+@media (max-width:1075px) {
+    
+
+    .travel{
+        width: 80%;
+    }
+
+
+    .img-footer{
+        width: 250px;
+        height: 25px;
+    }
+    
+    
+    .services-box{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: 90%;
+        padding-top: 30px;
+    }
+
+
+}
+
+
+@media (max-width: 990px){
+
+    .travel{
+        width: 90%;;
+    }
+}
+
+@media (max-width: 900px){
+
+
+    #link-icon-main.open{
+        z-index: -1111;
+        opacity: 0;
+        pointer-events: none;
+     }
+ 
+ 
+ 
+     nav.open{
+         width: 250px;
+         z-index: 100;
+         transition: .55s ease;
+         background-color: black;
+     }
+}
+
+
+@media (max-width:860px){
+
+
+    .main{
+        background-size: 110% 100%;
+    }
+
+    .travel h1{
+        font-size: 40px;
+    }
+
+
+
+    #register{
+        min-width: 70vw;
+        
+    }
+
+
+    .viauy-footer{
+        width: 100%;
+    }
+
+
+
+
+    .content-main2 p{
+        font-size: 14px;
+    }
+    
+    
+    .city-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+        margin-top: 50px;
+    }
+    
+    .city{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 45%;
+    }
+    
+    .img-city{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+    }
+    
+    .img-city:hover{
+        transform: scale(1.05);
+    }
+    
+    .city p{
+        line-height: 23px;
+        font-size: 14px;
+    }
+
+
+    .bus-asientos{
+        gap: 2rem;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .img-footer{
+        width: 200px;
+        height: 20px;
+    }
+
+
+    #register{
+        min-width: 70vw;
+        padding: 50px 40px;
+    }
+
+    .name-secondname{
+        width: 100%;
+    }
+
+    .form-section .asunto{
+        width: 100%;
+    }
+
+
+
+    .asiento{
+        width: 4vw;
+        height: 4vw;
+    }
+    .tipos-referencias p{
+        height: 4vw;
+    }
+    
+}
+
+
+@media (max-width: 660px){
+
+
+    .main{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url("../img/bus.jpg");
+    }
+    
+    .travel h1{
+        font-size: 35px
+    }
+
+    form label{
+        font-size: 15px;
+    }
+
+    .travel{
+        width: 100%;;
+    }
+
+    .travel-select{
+        text-align: center;
+        padding: 40px 40px;
+    }
+
+    .travel-select h2, .asientos-content h2{
+        font-size: 30px;
+    }
+
+    .input-travel-box{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .input-travel:nth-child(2),
+    .input-travel:nth-child(4),
+    .input-travel:nth-child(5){
+        margin-right: 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .icon-movil{
+        width: 130px;
+        height: 30px;
+    }
+
+    .link-icon-movil{
+        display: block;
+    }
+
+    .link-icon-main{
+        display: none;
+    }
+
+    nav.open{
+        width: 250px;
+        z-index: 100;
+        transition: .55s ease;
+        background-color: black;
+    }
+
+    .icons-box i{
+        font-size: 27px;
+    }
+
+    .icons-box i, .icons-box a, .icons-box #menu, .icons-box .icons-nolinks{
+        font-size: 27px;
+    }
+
+    .login{
+        background-color: transparent;
+    }
+
+    .title-login h3{
+        display: none;
+    }
+
+    .title-login-movil{
+        display: block;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .icon-login{
+        display: none;
+    }
+
+    #icon-main-movil.open{
+        transform: translateX(-150%);
+        transition: .5s ease;
+    }
+
+    #register{
+        min-width: 90%;
+        
+    }
+
+
+    .services-box{
+        flex-direction: column;
+    }
+
+
+    .contacto{
+        text-align: center;
+    }
+
+    .contacto h2{
+        font-size: 30px;
+    }
+    
+
+    .form-email form{
+        gap: 2rem;
+        align-items: center;
+    }
+    
+
+    .name-secondname{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-email{
+        gap: 10rem;
+        
+    }
+
+
+    .empresa-text{
+        margin: 0;
+    }
+
+
+
+    
+    .asiento {
+        font-size: 12px;
+    }
+
+    .asientos-content{
+        padding: 40px 40px;
+        width: 100%;
+        
+    }
+
+    .referencias-asientos, .asientos-content h2, .asiento-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .asientos-content h3{
+        font-size: 20px;
+    }
+
+    .referencias{
+        min-width: 200px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:565px) {
+    
+    .travel-select form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .travel-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .travel-select, .asientos-content{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .travel-select h2, .asientos-content h2{
+        font-size: 30px;
+    }
+
+    .pasaje{
+        width: 100%;
+    }
+
+    .input-travel-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .input-travel{
+        width: 80%;
+        margin: 0 0 10px 0;
+    }
+
+    header{
+        padding: 10px 10px;
+    }
+
+    .icons-box{
+        justify-content: end;
+    }
+
+    .icons-box a{
+        margin-left: 30px;
+    }
+
+    .icons-box #menu{
+        margin-left: 30px;
+    }
+
+    .nav-icons{
+        font-size: 18px;
+    }
+
+
+    nav.open{
+        width: 260px;
+    }
+
+
+    @keyframes right {
+        from{
+            top: 25%;
+            right: 0;
+        }
+    
+        to{
+            top: 25%;
+            right: 280px;
+        }
+    }
+
+
+
+    .asientos-content{
+        background-color: transparent;
+    }
+
+
+    .referencias{
+        min-width: 300px;
+    }
+
+    .referencias-asientos{
+        display: grid;
+        gap: 2rem;
+    }
+
+
+    .asiento{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .tipos-referencias{
+        justify-content: space-between;
+    }
+
+
+
+
+    .main2 h2{
+        font-size: 30px;
+    }
+
+    .city-box{
+        flex-direction: column;
+        padding: 0 50px;
+    }
+
+    .city{
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+
+    .viauy-footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 80%;
+    }
+
+    .ul{
+        display: none;
+    }
+
+    .footer-content1{
+        width: 100%;
+    }
+
+    .footer-content2{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .img-footer{
+        width: 300px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:500px){
+
+    
+
+    label, p, a{
+        font-size: 14px;
+    }
+
+
+    .remember{
+        justify-content: space-between;
+    }
+
+    .remember label{
+        font-size: 14px;
+    }
+
+    .travel-select h2, .asientos-content h2{
+        font-size: 30px;
+    }
+
+    .travel h1{
+        font-size: 35px;
+    }
+
+    .login{
+        width: 90%;
+        padding: 0 30px;
+    }
+
+    #register{
+        min-width: 100%;
+        
+    }
+
+
+}
+
+
+@media (max-width: 460px){
+
+    .main{
+        background-size: 150% 100%;
+    }
+
+    .login{
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    header{
+        padding: 10px 10px;
+    }
+
+    .icons-box{
+        justify-content: end;
+    }
+
+    .icons-box i, .icons-box a, .icons-box #menu, .icons-box .icons-nolinks{
+        font-size: 22px;
+    }
+
+    .nav-icons{
+        font-size: 14px;
+    }
+
+    nav.open{
+        width: 200px;
+    }
+    
+
+
+    .icon-movil{
+        width: 100px;
+        height: 25px;
+    }
+
+    @keyframes right {
+        from{
+            top: 28%;
+            right: 0;
+        }
+    
+        to{
+            top: 28%;
+            right: 220px;
+        }
+    }
+
+    .travel-select h2, .asientos-content h2{
+        font-size: 25px;
+    }
+
+    .travel h1{
+        font-size: 35px;
+    }
+
+
+    .footer-content1 p, .footer-content2 ul li a, .coderwise-content p, .coderwise-content a{
+        font-size: 10px;
+    }
+
+    .asiento{
+        width: 6vw;
+        height: 6vw;
+    }
+ 
+}
+
+
+@media (max-width:400px) {
+
+    .main{
+        background-size: 150% 100%;
+    }
+
+    .icons-box i, .icons-box a, .icons-box #menu, .icons-box .icons-nolinks{
+        font-size: 20px;
+    }
+
+    .travel h1{
+        font-size: 30px;
+    }
+
+    .name-register{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-input{
+        margin-right: 0;
+    }
+
+    #register .input-box{
+        margin-bottom: 10px;
+    }
+
+    #register .input-box input{
+        margin-bottom: 0px;
+    }
+
+    #register .content-login .margin-bottom{
+        margin-bottom: 20px;
+    }
+
+
+    #register .input-box i{
+        position: absolute;
+        top: 23%;
+        left: 4%;
+        color: var(--black-color);
+    }
+
+
+    .asientos-content h3{
+        font-size: 18px;
+    }
+
+
+}
+
+
+@media (max-width:380px){
+
+    .travel-select h2, .asientos-content h2{
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .travel h1{
+        font-size: 30px;
+    }
+
+    .input-travel{
+        width: 100%;
+    }
+
+    .title-login-movil{
+        font-size: 25px;
+    }
+
+    .login label, .login a, .login p{
+        font-size: 11px;
+    }
+
+    .icons-box .icons-nolinks{
+        margin-left: 0;
+    }
+
+
+    .asiento{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .asiento-buttons{
+        gap: 2rem;
+    }
+
+
+}
+
+
+@media (max-width:335px){
+
+
+    .img-footer{
+        width: 200px;
+        height: 20px;
+    }
+
+    @keyframes right {
+        from{
+            top: 28%;
+            right: 0;
+        }
+    
+        to{
+            top: 28%;
+            right: 160px;
+        }
+    }
+
+    nav.open{
+        width: 150px;
+    }
+
+    
+
+    .footer-content1 p, .footer-content2 ul li a{
+        font-size: 10px;
+    }
+
+
+    .referencias{
+        min-width: 200px;
+    }
+
+
+    
+}
