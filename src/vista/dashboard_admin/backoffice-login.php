@@ -15,8 +15,8 @@
         <h3>Inicia Sesión</h3>
         <form>
             <div class="login-input">
-                <label for="">ID de Usuario</label>
-                <input type="email" id="email" placeholder="Ingrese su ID de usuario">
+                <label for="">Email Admin</label>
+                <input type="email" id="email" placeholder="Ingrese su email">
             </div>
             <div class="login-input">
                 <label for="">Contraseña</label>

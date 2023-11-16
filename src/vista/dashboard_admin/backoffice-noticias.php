@@ -35,7 +35,7 @@
                     </div>
                     <div class="news-input">
                         <label for="">Descripción</label>
-                        <textarea name="Descripcion" id="" cols="30" rows="10"></textarea>
+                        <textarea name="Descripcion" id="" cols="30" rows="10" style="resize: none;"></textarea>
                     </div>
 
                     <input type="hidden" name="Fecha" id="Fecha">
