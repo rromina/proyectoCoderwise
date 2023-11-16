@@ -51,7 +51,7 @@
                     echo "</tr>";
                   }
               } else {
-                  echo "No se encontraros lineas que contengan una ruta con el origen y destino indicado.";
+                  echo "<br><br>No se encontraros lineas que contengan una ruta con el origen y destino indicado.";
               }
             ?>
           </tbody>
