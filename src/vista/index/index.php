@@ -46,7 +46,7 @@
     
                 //configuracion de cuenta
                 $mail->Username = 'paradise5425@gmail.com';
-                $mail->Password = 'zhzg glvc ydpd dryf';
+                $mail->Password = 'lvpw hllh xvdf uumg';
                 $mail->setFrom('paradise5425@gmail.com', 'Viauy');
     
                 //destinatario

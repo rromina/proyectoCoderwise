@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>
         // Crear la cabecera de la tabla
         const cabecera = tabla.createTHead();
         const filaCabecera = cabecera.insertRow();
-        const encabezados = ["IDUsuario", "Nombre", "Apellido", "Edad", "Email"];
+        const encabezados = ["IDUsuario", "Nombre", "Apellido", "CI", "Email"];
 
         // Agregar encabezados a la fila de cabecera
         encabezados.forEach(textoEncabezado => 

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s ease;
+}
+
+:root {
+    --main-color: #E79115;
+    --darkmain-color: #6c3d00;
+    --black-color: #141414;
+    --lightblack-color: #222222;
+    --white-color: #F2F2F2;
+    --grey-color: #919293;
+       
+}
+
+
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 111111;
+    color: var(--black-color);
+  }
+
+#content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.form-pago{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 2rem;
+}
+
+.pago-label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+}
+
+
+.form-pago div input{
+    width: 100%;
+    padding: 5px;
+}
+
+.fecha-cvv{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.fecha-cvv input{
+    width: 100%;
+}
+
+.confirmar-compra{
+    padding: 10px;
+    min-width: 50%;
+    border: none;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+
+#cerrar{
+    position: absolute;
+    color: var(--black-color);
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 510px){
+    #content{
+        width: 90%;
+        
+    }
+}

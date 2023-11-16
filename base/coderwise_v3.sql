@@ -166,17 +166,131 @@ CREATE TABLE Noticias (
 );
 
 -- datos de prueba 
-INSERT INTO Usuarios (Nombre, Apellido, Edad, Email, Contraseña) VALUES ('Juan', 'Pérez', 30, 'juan@example.com', 'contraseña123'),('María', 'Gómez', 25, 'maria@example.com', 'clave456'),('Romina', 'Celintano', 20, 'paradise5425@gmail.com', 'romina123'),('Luis', 'Martínez', 35, 'luis@example.com', 'clave_emp');
-INSERT INTO Clientes (CI, IDUsuario, Tel, Email, Contraseña, Nombre, Apellido) VALUES (1234567, (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Juan'), '555-1234', 'juan@example.com', 'contraseña123','Juan', 'Pérez'),(9876543, (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'María'), '555-5678', 'maria@example.com', 'clave456','María', 'Gómez');
-INSERT INTO Empleados (IDUsuario, CedEmp, Nombre, Apellido, Edad, Email, Contraseña, FechaIng) VALUES  ((SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Ana'),'12345612', 'Romina', 'Celintano', 20, 'paradise5425@gmail.com', 'romina123', '2023-10-16'),((SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Luis'),'11111110', 'Luis', 'Martínez', 35, 'luis@example.com', 'clave_emp', '2023-10-16');
-INSERT INTO Administradores (CedEmp, IDUsuario, Nombre, Apellido, Email, Contraseña, FechaIng) VALUES ((SELECT CedEmp FROM Empleados WHERE Nombre = 'Romina'), (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Romina'), 'Romina', 'Celintano', 'paradise5425@gmail.com', 'romina123', '2023-10-16');
-INSERT INTO Choferes (CedEmp, IDUsuario, Nombre, Apellido, Edad, Email, Contraseña, FechaIng) VALUES ((SELECT CedEmp FROM Empleados WHERE Nombre = 'Luis'), (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Luis'), 'Luis', 'Martínez', 35, 'luis@example.com', 'clave_emp', '2023-10-16');
-INSERT INTO Omnibus (FechaC, Estado) VALUES ('2023-10-16', 1),('2023-10-16', 0);
-INSERT INTO Conducen (IDchof, IdOmnibus, Fecha_Hora) VALUES ((select IDchofer from Choferes where nombre = 'Luis'), 1, '2023-10-16 08:00:00');
-INSERT INTO Servicios (IdOmnibus, IDChofer, HoraSalida, HoraLlegada, Fecha) VALUES (1, (select IDChofer from Choferes where nombre = 'Luis'), '08:00:00', '10:30:00', '2023-10-16'),(1, (select IDChofer from Choferes where nombre = 'Luis'), '09:00:00', '11:45:00', '2023-10-16');
-INSERT INTO Rutas (IDruta, Origen, Destino) VALUES (1, 'montevideo', 'canelones'),(2, 'montevideo', 'san jose');
-INSERT INTO Lineas (IdServicio,Nombre, IDruta, DuracionViaje, Precio) VALUES (1,'A22', 1, '01:30:00', 171),(2,'135', 2, '02:15:00', 300);
-INSERT INTO Paradas (IDlinea, Direccion) VALUES (1, 'montevideo'),(1, 'canelones'),(2, 'montevideo'),(2, 'san jose');
-INSERT INTO Asientos (IdOmnibus, EstadoAsiento) VALUES (1, true);
+INSERT INTO Usuarios (Nombre, Apellido, Edad, Email, Contraseña) 
+VALUES 
+('Leandro', 'Dominguez', 57664833, 'kumidom18@gmail.com', 'leandro123'),
+('Elias', 'Clavijo', 57448962, 'eliasju09@gmail.com', 'elias123'),
+('Romina', 'Celintano', 46558234, 'paradise5425@gmail.com', 'romina123'),
+('Guillermo', 'Fuentes', 47558756, 'guille3102010@gmail.com', 'guillermo123'),
+('Santiago', 'López', 54772063, 'santilopeez7s@gmail.com', 'santi123');
+
+--
+
+INSERT INTO Clientes (CI, IDUsuario, Tel, Email, Contraseña, Nombre, Apellido) VALUES 
+(1234567, (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Leandro'), '555-1234', 'kumidom18@gmail.com', 'leandro123','Leandro', 'Dominguez'),
+(9876543, (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Elias'), '555-5678', 'eliasju09@gmail.com', 'clave456','Elias', 'Clavijo');
+
+--
+
+INSERT INTO Empleados (IDUsuario, CedEmp, Nombre, Apellido, Edad, Email, Contraseña, FechaIng) VALUES  
+((SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Romina'),'12345612', 'Romina', 'Celintano', 46558234, 'paradise5425@gmail.com', 'romina123', '2023-10-16'),
+((SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Guillermo'),'11111110', 'Guillermo', 'Fuentes', 47558756, 'guille3102010@gmail.com', 'guillermo123', '2023-10-16'), 
+((SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Santiago'),'54772063', 'Santiago', 'López', 54772063, 'santilopeez7s@gmail.com', 'santi123', '2023-10-16');
+
+--
+
+INSERT INTO Administradores (CedEmp, IDUsuario, Nombre, Apellido, Email, Contraseña, FechaIng) VALUES 
+((SELECT CedEmp FROM Empleados WHERE Nombre = 'Romina'), (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Romina'), 'Romina', 'Celintano', 'paradise5425@gmail.com', 'romina123', '2023-10-16'), 
+((SELECT CedEmp FROM Empleados WHERE Nombre = 'Santiago'), (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Santiago'), 'Santiago', 'Celintano', 'santilopeez7s@gmail.com', 'santi123', '2023-10-16');
+
+--
+
+INSERT INTO Choferes (CedEmp, IDUsuario, Nombre, Apellido, Edad, Email, Contraseña, FechaIng) VALUES 
+((SELECT CedEmp FROM Empleados WHERE Nombre = 'Guillermo'), (SELECT IDUsuario FROM Usuarios WHERE Nombre = 'Guillermo'), 'Guillermo', 'Fuentes', 47558756, 'guille3102010@gmail.com', 'guillermo123', '2023-10-16');
+
+--
+
+INSERT INTO Omnibus (FechaC, Estado) 
+VALUES 
+('2023-10-16', 1),
+('2023-10-16', 0);
+
+--
+
+INSERT INTO Conducen (IDchof, IdOmnibus, Fecha_Hora) 
+VALUES 
+((select IDchofer from Choferes where nombre = 'Guillermo'), 1, '2023-10-16 08:00:00');
+
+--
+
+INSERT INTO Servicios (IdOmnibus, IDChofer, HoraSalida, HoraLlegada, Fecha) VALUES 
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '08:00:00', '10:30:00', '2023-10-16'),
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '17:00:00', '19:30:00', '2023-10-16'),
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '20:00:00', '21:30:00', '2023-10-16'),
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '09:00:00', '12:30:00', '2023-10-16'),
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '13:00:00', '16:00:00', '2023-10-16'),
+(1, (select IDChofer from Choferes where nombre = 'Guillermo'), '09:00:00', '11:45:00', '2023-10-16');
+
+--
+
+INSERT INTO Rutas (IDruta, Origen, Destino) 
+VALUES 
+(1, 'Montevideo', 'Canelones'),
+(2, 'Montevideo', 'San Jose'),
+(3, 'Montevideo', 'Maldonado'),
+(4, 'Montevideo', 'Colonia'),
+(5, 'Montevideo', 'Durazno');
+
+--
+
+INSERT INTO Lineas (IdServicio, Nombre, IDruta, DuracionViaje, Precio) 
+VALUES 
+(1,'A22', 1, '01:30:00', 171),
+(2,'B35', 2, '02:30:00', 200),
+(3,'C35', 3, '01:30:00', 300),
+(4,'D35', 4, '03:30:00', 99),
+(5,'P35', 4, '03:00:00', 110),
+(6,'E35', 5, '02:15:00', 77);
+
+--
+
+INSERT INTO Paradas (IDlinea, Direccion) 
+VALUES 
+(1, 'Montevideo'), (1, 'Canelones'),
+(2, 'Montevideo'), (2, 'San Jose'),
+(3, 'Montevideo'), (3, 'Maldonado'),
+(4, 'Montevideo'), (4, 'Colonia'),
+(5, 'Montevideo'), (5, 'Durazno');
+
+--
+
+INSERT INTO Asientos (IdOmnibus, EstadoAsiento) 
+VALUES 
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true),
+(1, true);
 
 

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/pago.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Empresa</title>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="bus-asientos">
                     <div class="lado-izquierdo asiento-posicion">
-                        <div id="asientooo" class="asiento as1" onclick="reservarAsiento(1)">1</div>
+                        <div class="asiento as1" onclick="reservarAsiento(1)">1</div>
                         <div class="asiento as2" onclick="reservarAsiento(2)">2</div>
                         <div class="asiento as5" onclick="reservarAsiento(5)">5</div>
                         <div class="asiento as6" onclick="reservarAsiento(6)">6</div>
@@ -85,19 +86,53 @@
             </div>
             
             <div class="asiento-buttons">
-                <input id="tarjeta" type="number" class="asiento-continuar" placeholder="ingrese numero de tarjeta" style="font-size:11px;color:black!important;width:250px;text-align:center;">
-                <button id="conf_compra" class="asiento-atras" >confirmar compra</button>
-                <!--<button class="asiento-continuar">Continuar</button>-->
+                <button id="mostrarPago" class="asiento-continuar">Continuar</button>
             </div>
             
             
         </div>
+
+
+        <div id="overlay">
+            <div class="pago oculto" id="pago" onclick="detenerPropagacion(event)">
+                <div id="content">
+                    <i class="fa-solid fa-xmark" id="cerrar" onclick="ocultarOverlay()"></i>
+                    <div>
+                        <h3>Ingrese su tarjeta</h3>
+                    </div>
+                    <div class="form-pago">
+                        <div class="pago-label">
+                            <label for="">Nombre</label>
+                            <input type="text" id="titular" placeholder="Ingrese nombre titular de la tarjeta">
+                        </div>
+                        <div class="pago-label">
+                            <label for="">Número</label>
+                            <input id="tarjeta" type="text" maxlength="16" placeholder="Ingrese número de tarjeta">
+                        </div>
+                        <div class="fecha-cvv">
+                            <div class="pago-label">
+                                <label for="">Fecha Vto.</label>
+                                <input type="date" name="" id="venc-card" placeholder="fecha de vencimiento">
+                            </div>
+                            
+                            <div class="pago-label">
+                                <label for="">Código Seg.</label>
+                                <input type="text" maxlength="3" name="" id="cvv" placeholder="CVV">
+                            </div>
+                        </div>
+                        <button id="conf_compra" class="confirmar-compra">Confirmar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
 
   <?php require 'src/vista/footer.php'; ?>
 
   <script src="public/js/index.js"></script>
+  <script src="public/js/compra.js"></script>
 
     <script>
       window.addEventListener('scroll', function() {
@@ -117,60 +152,52 @@
 
     const confirm = document.querySelector("#conf_compra");
 
-    // Variables PHP
-    var idOmnibus = <?php echo $idOmnibus; ?>;
-    var idServicio = <?php echo $idServicio; ?>;
-    var id_usuario = <?php echo $id_usuario; ?>;
-    var asiento;
+    let idOmnibus = <?php echo $idOmnibus; ?>;
+    let idServicio = <?php echo $idServicio; ?>;
+    let id_usuario = <?php echo $id_usuario; ?>;
+    let asiento;
 
-    // Función para redirigir a la URL con los parámetros
     function reservarAsiento(numAsiento) 
     {
        
         const x = document.querySelector(".as" + numAsiento); 
-        x.style.backgroundColor = "#e79115";
+        x.classList.toggle('seleccionado');
         asiento = numAsiento;
     }
 
-    confirm.addEventListener("click", ()=> 
-    {
-        const tarjeta = document.querySelector("#tarjeta");
-        if(esNumeroTarjetaValido(tarjeta.value))
-        {
+
+    const tarjeta = document.querySelector("#tarjeta");
+    const cvv = document.querySelector("#cvv");
+
+    tarjeta.addEventListener("input", function() {
+        this.value = this.value.replace(/[^\d]/g, ''); 
+    });
+
+    cvv.addEventListener("input", function() {
+        this.value = this.value.replace(/[^\d]/g, ''); 
+    });
+
+    confirm.addEventListener("click", () => {
+        const titular = document.querySelector("#titular");
+        const vencCard = document.querySelector("#venc-card");
+
+        if (!titular.value || !esNumeroTarjetaValido(tarjeta.value) || !validarCVV(cvv.value) || !vencCard.value) {
+            alert("Faltan campos por llenar o los datos son inválidos.");
+        } else {
             window.location.href = '<?php echo URL; ?>?c=Reserva&m=pasaje&idOmnibus=' + idOmnibus + '&idServicio=' + idServicio + '&id_usuario=' + id_usuario + '&numAsiento=' + asiento;
-        }else 
-        {
-            alert("numero de tarjeta inválido")
         }
-    })
+    });
 
+    function esNumeroTarjetaValido(numeroTarjeta) {
+        return /^\d{16}$/.test(numeroTarjeta);
+    }
 
-    function esNumeroTarjetaValido(numeroTarjeta) 
-    {
-        numeroTarjeta = numeroTarjeta.replace(/[-\s]/g, '');
-
-        if (!/^\d+$/.test(numeroTarjeta)) return false;
-
-
-        var digitos = numeroTarjeta.split('').map(Number).reverse();
-
-        var suma = 0;
-        for (var i = 0; i < digitos.length; i++) {
-            var digito = digitos[i];
-            if (i % 2 === 1) {
-                digito *= 2;
-                if (digito > 9) {
-                    digito -= 9;
-                }
-            }
-            suma += digito;
-        }
-
-        return suma % 10 === 0;
+    function validarCVV(cvv) {
+        return /^\d{3}$/.test(cvv);
     }
 
 
-    </script>
+</script>
 
 </body>
 </html>

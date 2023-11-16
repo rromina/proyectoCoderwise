@@ -20,7 +20,7 @@
 
     
         <div class="main contacto-background">
-            <div class="contacto">
+            <div class="contacto min-height">
                 <h2>Noticias</h2>
                 <div class="empresa-text">
 

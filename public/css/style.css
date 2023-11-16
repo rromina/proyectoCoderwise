@@ -567,7 +567,7 @@ nav.open{
     100% { transform: rotate(360deg); }
   }
 
-  /*
+  
 
 .lineas{
     margin-top: 50px;
@@ -580,12 +580,20 @@ nav.open{
 
 
 tbody tr{
-    border: 1px solid var(--white-color);
     background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 1rem;
 }
 
 tr td{
     padding: 1vw;
+}
+
+.servicios{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 15vh 0 20vh 0;
 }
 
 
@@ -679,8 +687,9 @@ tr td{
 }
 
 .libre{
-    border: 1px solid white;
+    border: 1px solid var(--main-color);
 }
+
 
 .seleccionado{
     background-color: var(--main-color);
@@ -756,6 +765,8 @@ tr td{
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
  }
+
+
 
 
     
@@ -1073,6 +1084,12 @@ h3{
 /*********************************** NOTICIAS *********************************/
 
 
+
+.min-height{
+    min-height: 100vh;
+}
+
+
 .provicional{
     height: 30vh;
 }
@@ -1296,6 +1313,15 @@ footer{
          transition: .55s ease;
          background-color: black;
      }
+
+
+
+    
+    .servicios{
+        align-items: start;
+        min-height: 100vh;
+        padding: 15vh 10vh 20vh 10vh;
+    }
 }
 
 
@@ -1365,6 +1391,42 @@ footer{
     .bus-asientos{
         gap: 2rem;
     }
+
+
+
+
+
+    .servicios {
+        display: flex;
+        align-items: center;
+    }
+
+    .servicios .contacto{
+        width: 90%;
+    }
+    
+
+    .servicios .contacto h2{
+        text-align: center;
+    }
+
+    .lineas{
+        width: 100%;
+        
+    }
+    
+    .lineas thead{
+        display: none;
+    }
+    
+    tr{
+        padding: 1vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
 
 }
 
@@ -1541,6 +1603,20 @@ footer{
 
 
 
+
+
+
+    .servicios .contacto{
+        width: 100%;
+    }
+
+    .lineas tbody tr{
+        padding: 20px;
+    }
+
+
+
+
     
     .asiento {
         font-size: 12px;
@@ -1708,6 +1784,14 @@ footer{
 
 
 
+    .servicios{
+        padding: 15vh 5vh 20vh 5vh;
+    }
+
+
+
+
+
 
     .viauy-footer{
         flex-direction: column;
@@ -1783,6 +1867,12 @@ footer{
     #register{
         min-width: 100%;
         
+    }
+
+
+
+    .lineas tbody tr td{
+        padding: 20px;
     }
 
 

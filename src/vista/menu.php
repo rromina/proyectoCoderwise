@@ -40,7 +40,7 @@
             <?php  
               if (session_status() == PHP_SESSION_NONE) session_start(); 
               if (isset($_SESSION['nombre_usuario'])) {
-                echo '<br><br><li><a href="' . URL . '?c=Login&m=logout"><div class="nav-icons"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesion</div></a></li>';
+                echo '<li><a href="' . URL . '?c=Login&m=logout"><div class="nav-icons"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesion</div></a></li>';
               }
             ?>
           </ul>

@@ -158,7 +158,6 @@ h1{
 
 .button-box{
     width: 50%;
-    text-align: center;
     
 }
 
@@ -171,6 +170,7 @@ h1{
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
 }
 
 .button-box input:hover, .button-box button:hover{
@@ -263,7 +263,6 @@ hr{
 }
 
 .button-box-editar{
-    text-align: center;
     width: 100%;
 }
 

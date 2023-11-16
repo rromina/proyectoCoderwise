@@ -22,7 +22,7 @@
     </div>
   <?php require 'src/vista/menu.php'; ?>
 
-    <div class="main inicio">
+    <div class="servicios inicio">
       <div class="contacto">
         <h2>Servicios</h2>
         
