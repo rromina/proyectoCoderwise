@@ -3,9 +3,9 @@
             <div class="footer-content1">
                 <img class="img-footer" src="public/img/logos-png/Viauy-5.png" alt="">
                 <p>
-                    ViaUY une las ciudades más importantes de los departamentos 
-                    de Montevideo, Florida, San José y Canelones, mediante una 
-                    red de más de 250 servicios diarios.
+                    ViaUY une a los departamentos más importantes de Uruguay, 
+                    incluyendo Montevideo, Canelones, Maldonado, Colonia, etc, 
+                    mediante una extensa red de servicios diarios.
                 </p>
             </div>
 
