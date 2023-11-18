@@ -70,7 +70,7 @@
                         <div class="asiento as11" onclick="reservarAsiento(11)">11</div>
                         <div class="asiento as12" onclick="reservarAsiento(12)">12</div>
                         <div class="asiento as15" onclick="reservarAsiento(15)">15</div>
-                        <div class="asiento as15" onclick="reservarAsiento(16)">15</div>
+                        <div class="asiento as16" onclick="reservarAsiento(16)">16</div>
                         <div class="asiento as19" onclick="reservarAsiento(19)">19</div>
                         <div class="asiento as20" onclick="reservarAsiento(20)">20</div>
                         <div class="asiento as23" onclick="reservarAsiento(23)">23</div>
